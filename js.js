@@ -26,3 +26,13 @@ var countdownInterval = setInterval(function() {
     document.getElementById("countdown").innerHTML = "EXPIRED";
   }
 }, 1000);
+
+Array.prototype.pow = function(n) {
+  return this.map(function(x) {
+    return Math.pow(x, n);
+  });
+};
+
+Function.prototype.defer = function(n) {
+  setTimeout(this, n);
+};
